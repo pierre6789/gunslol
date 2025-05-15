@@ -1,12 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect, forwardRef, useImperativeHandle } from 'react'
 
-interface Song {
-  title: string
-  artist: string
-  file: string
-}
-
 interface MusicPlayerProps {
   onStart?: () => void
 }
@@ -52,7 +46,6 @@ const MusicPlayer = forwardRef<MusicPlayerRef, MusicPlayerProps>(({ onStart }, r
 
   useEffect(() => {
     setAudio(new Audio(songs[0].file))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {

@@ -150,7 +150,7 @@ export default function Home() {
                   [&::-moz-range-thumb]:hover:scale-110"
               />
             </motion.div>
-          </div>
+        </div>
         </motion.div>
       )}
 
@@ -221,7 +221,7 @@ export default function Home() {
 
         {/* Music Player */}
         <MusicPlayer ref={musicPlayerRef} onStart={() => setHasStarted(true)} />
-      </div>
+    </div>
     </main>
   )
 }
